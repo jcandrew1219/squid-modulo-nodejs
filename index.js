@@ -63,12 +63,12 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    fs.appendFile('README.md', ' ', (err) => 
+    fs.appendFile('./gen/README.md', ' ', (err) => 
     err ? console.error(err) : console.log ('ReadMe created!')); 
     inquirer
         .prompt(questions)
         .then(data => {
-            writeToFile('./README.md', data);
+            writeToFile('./gen/README.md', data);
         })
 }
 
